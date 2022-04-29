@@ -1,0 +1,4 @@
+TELEM1="-C /dev/ttyO1"
+TELEM2="-A udp:192.168.1.35:14550"
+GPS="-B /dev/ttyO2"
+RANGER="-F /dev/ttyO5"

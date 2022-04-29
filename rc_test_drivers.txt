@@ -1,0 +1,34 @@
+rc_test_drivers
+
+Kernel: 4.19.232-bone-rt-r75
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+Debian: 10.12
+
+PASSED: gpio 0
+PASSED: gpio 1
+PASSED: gpio 2
+PASSED: gpio 3
+PASSED: pwm0
+PASSED: pwm1
+PASSED: pwm2
+PASSED: eqep0
+PASSED: eqep1
+PASSED: eqep2
+ERROR:  pru-rproc driver not loaded
+PASSED: uart1
+PASSED: uart2
+ERROR:  uart4 driver not loaded
+PASSED: uart5
+PASSED: i2c1
+PASSED: i2c2
+ERROR: spi driver not loaded
+PASSED: LED
+PASSED: ADC iio
+
+Currently running on a:
+MODEL_BB_BLUE
+Robot Control library Version:
+1.0.5
+
+
+rc_test_d

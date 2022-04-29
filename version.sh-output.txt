@@ -1,0 +1,51 @@
+debian@beaglebone:~$ sudo /opt/scripts/tools/version.sh
+git:/opt/scripts/:[674bb55e34e94e3837f4f55790c7d1a52c9e149f]
+eeprom:[A335BNLTBLA21736EL002642]
+model:[TI_AM335x_BeagleBone_Blue]
+dogtag:[BeagleBoard.org Debian Buster IoT Image 2020-04-06]
+bootloader:[eMMC-(default)]:[/dev/mmcblk1]:[U-Boot SPL 2019.04-00002-g07d5700e21 (Mar 06 2020 - 11:24:55 -0600)]:[location: dd MBR]
+bootloader:[eMMC-(default)]:[/dev/mmcblk1]:[U-Boot 2019.04-00002-g07d5700e21]:[location: dd MBR]
+UBOOT: Booted Device-Tree:[am335x-boneblue.dts]
+UBOOT: Loaded Overlay:[AM335X-PRU-UIO-00A0]
+UBOOT: Loaded Overlay:[BB-ADC-00A0.bb.org-overlays]
+UBOOT: Loaded Overlay:[BB-I2C1-00A0]
+kernel:[4.19.232-bone-rt-r75]
+nodejs:[v10.24.0]
+device-tree-override:[dtb=am335x-boneblue.dtb]
+/boot/uEnv.txt Settings:
+uboot_overlay_options:[enable_uboot_overlays=1]
+uboot_overlay_options:[uboot_overlay_pru=/lib/firmware/AM335X-PRU-RPROC-4-19-TI-00A0.dtbo]
+uboot_overlay_options:[uboot_overlay_pru=/lib/firmware/AM335X-PRU-UIO-00A0.dtbo]
+uboot_overlay_options:[enable_uboot_cape_universal=1]
+uboot_overlay_options:[dtb_overlay=/lib/firmware/BB-I2C1-00A0.dtbo]
+pkg check: to individually upgrade run: [sudo apt install --only-upgrade <pkg>]
+pkg:[bb-cape-overlays]:[4.14.20210821.0-0~buster+20210821]
+pkg:[bb-customizations]:[1.20220325.0-0~buster+20220325]
+pkg:[bb-usb-gadgets]:[1.20220316.1-0~buster+20220316]
+pkg:[bb-wl18xx-firmware]:[1.20211222.2-0~buster+20211222]
+pkg:[kmod]:[26-1]
+pkg:[librobotcontrol]:[1.0.5-git20200715.0-0~buster+20200716]
+pkg:[firmware-ti-connectivity]:[20190717-2rcnee1~buster+20200305]
+groups:[debian : debian adm kmem dialout cdrom floppy audio dip video plugdev users systemd-journal bluetooth netdev i2c gpio pwm eqep remoteproc admin spi iio docker tisdk weston-launch xenomai cloud9ide]
+cmdline:[console=ttyO0,115200n8 bone_capemgr.uboot_capemgr_enabled=1 root=/dev/mmcblk1p1 ro rootfstype=ext4 rootwait coherent_pool=1M net.ifnames=0 lpj=1990656 rng_core.default_quality=100 quiet]
+dmesg | grep remote
+[    1.340335] remoteproc remoteproc0: wkup_m3 is available
+[    1.519165] remoteproc remoteproc0: powering up wkup_m3
+[    1.519196] remoteproc remoteproc0: Booting fw image am335x-pm-firmware.elf, size 217148
+[    1.519461] remoteproc remoteproc0: remote processor wkup_m3 is now up
+[   34.631927] Bluetooth: hci0: change remote baud rate command in firmware
+dmesg | grep pru
+dmesg | grep pinctrl-single
+[    1.006548] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    1.235338] pinctrl-single 44e10800.pinmux: pin PIN102 already requested by 48300180.eqep; cannot claim for 481a0000.spi
+[    1.251718] pinctrl-single 44e10800.pinmux: pin-102 (481a0000.spi) status -22
+[    1.258907] pinctrl-single 44e10800.pinmux: could not request pin 102 (PIN102) from group pinmux_spi1_pins  on device pinctrl-single
+dmesg | grep gpio-of-helper
+lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+END
+
+
+
+
+
